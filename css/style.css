@@ -1,0 +1,350 @@
+﻿body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+/* Modal Popup */
+
+code
+{
+    text-align: center;
+    margin: 0 5px !important;
+}
+
+.modal-container
+{
+}
+
+
+.md-section
+{
+    color: #fff;
+    background: #007cff !important;
+}
+
+.md-overlay
+{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background: #000;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+.md-dialog
+{
+    width: 500px;
+    height: auto;
+    min-height: 200px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -180px;
+    background: #007cff;
+    border: 10px solid #0075e0;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99999;
+    color: #fff;
+}
+
+    .md-dialog .head
+    {
+        border-bottom: 1px solid #0075e0;
+        height: 40px;
+        line-height: 40px;
+        margin-top: -10px;
+        font-family: 'Bitter', serif;
+        color: #fff;
+    }
+
+.fancy-font
+{
+    font-family: 'Bitter', serif;
+}
+
+body.show .md-dialog
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+body.show .md-overlay
+{
+    opacity: 0.5;
+    visibility: visible;
+}
+
+
+/* **************************************************************** pop-in ************************************************************** */
+.md-dialog[data-effect="pop-in"]
+{
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -o-transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+}
+
+body.show .md-dialog[data-effect="pop-in"]
+{
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* **************************************************************** /pop-in ************************************************************** */
+
+
+/* **************************************************************** slide-in ************************************************************** */
+.md-dialog[data-effect="slide-in"]
+{
+    -moz-transform: translateX(20%);
+    -ms-transform: translateX(20%);
+    -o-transform: translateX(20%);
+    -webkit-transform: translateX(20%);
+    transform: translateX(20%);
+}
+
+.md-dialog[data-effect="slide-in-left"]
+{
+    -moz-transform: translateX(-20%);
+    -ms-transform: translateX(-20%);
+    -o-transform: translateX(-20%);
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+
+body.show .md-dialog[data-effect="slide-in"],
+body.show .md-dialog[data-effect="slide-in-left"]
+{
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+/* **************************************************************** /slide-in ************************************************************** */
+
+/* **************************************************************** slide-in Bottom top ************************************************************** */
+
+.md-dialog[data-effect="slide-in-bottom"]
+{
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+}
+
+.md-dialog[data-effect="slide-in-top"]
+{
+    -moz-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    -o-transform: translateY(-20%);
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+}
+
+
+body.show .md-dialog[data-effect="slide-in-bottom"],
+body.show .md-dialog[data-effect="slide-in-top"]
+{
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+
+/* **************************************************************** /slide-in Bottom top ************************************************************** */
+
+/* **************************************************************** Newspaper ************************************************************** */
+.md-dialog[data-effect="newspaper"]
+{
+    -moz-transform: scale(0) rotate(720deg);
+    -ms-transform: scale(0) rotate(720deg);
+    -o-transform: scale(0) rotate(720deg);
+    -webkit-transform: scale(0) rotate(720deg);
+    transform: scale(0) rotate(720deg);
+}
+
+body.show .md-dialog[data-effect="newspaper"]
+{
+    -moz-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    -o-transform: scale(1) rotate(0deg);
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+}
+
+/* **************************************************************** /Newspaper ************************************************************** */
+
+/* **************************************************************** zoom-back ************************************************************** */
+
+.md-dialog[data-effect="zoom-back"]
+{
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+body.show .md-dialog[data-effect="zoom-back"]
+{
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* **************************************************************** /zoom-back ************************************************************** */
+
+/* **************************************************************** zoom-back-twist ************************************************************** */
+.md-dialog[data-effect="zoom-back-twist"]
+{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform: translateZ(400px) rotate(20deg);
+    -ms-transform: translateZ(400px) rotate(20deg);
+    -o-transform: translateZ(400px) rotate(20deg);
+    -webkit-transform: translateZ(400px) rotate(20deg);
+    transform: translateZ(400px) rotate(20deg);
+}
+
+body.show .md-dialog[data-effect="zoom-back-twist"]
+{
+    -webkit-transform: translate(0%) translateZ(0) rotate(0deg);
+    -moz-transform: translate(0%) translateZ(0) rotate(0deg);
+    -ms-transform: translate(0%) translateZ(0) rotate(0deg);
+    -o-transform: translate(0%) translateZ(0) rotate(0deg);
+    transform: translate(0%) translateZ(0) rotate(0deg);
+}
+
+/* **************************************************************** /zoom-back-twist  ************************************************************** */
+
+/* **************************************************************** sticky-up ************************************************************** */
+
+.md-dialog[data-effect="sticky-up"]
+{
+    -moz-transform: translateY(-140%);
+    -ms-transform: translateY(-140%);
+    -o-transform: translateY(-140%);
+    -webkit-transform: translateY(-140%);
+    transform: translateY(-140%);
+    opacity: 1;
+    visibility: visible;
+}
+
+body.show .md-dialog[data-effect="sticky-up"]
+{
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+/* **************************************************************** /sticky-up ************************************************************** */
+
+/* **************************************************************** 3d-horizontal ************************************************************** */
+
+.md-dialog[data-effect="3d-horizontal"]
+{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform: rotateY(120deg);
+    -ms-transform: rotateY(120deg);
+    -o-transform: rotateY(120deg);
+    -webkit-transform: rotateY(120deg);
+    transform: rotateY(120deg);
+}
+
+body.show .md-dialog[data-effect="3d-horizontal"]
+{
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    visibility: visible;
+    opacity: 1;
+}
+
+/* **************************************************************** /3d-horizontal ************************************************************** */
+
+.btn
+{
+    -ms-filter: blur(1px);
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    filter: blur(1px);
+}
+
+.btn:hover,
+.btn:focus{
+    -ms-filter: blur(0);
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    filter: blur(0);
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px)
+{
+    .md-dialog
+    {
+        width: 94%;
+        height: auto;
+        min-height: 200px;
+        position: absolute;
+        left: 3%;
+        top: 10%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .btn
+    {
+        margin-bottom: 5px;
+    }
+}
+
+
+
+@media only screen and (min-device-width : 641px) and (max-device-width : 980px)
+{
+    .btn
+    {
+        margin-bottom: 5px;
+    }
+}
